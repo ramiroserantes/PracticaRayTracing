@@ -117,9 +117,12 @@ scene = [add_sphere([.75, .1, 1.], .6, [0., 0., 1.]),
          ]
 
 # Light positions and colors.
-lights = [{'position': np.array([5., 5., -10.]), 'color': np.ones(3)},
-          {'position': np.array([-3., 5., -15.]), 'color': np.array([0.5, 0.5, 0.5])},
-          {'position': np.array([0., 10., -5.]), 'color': np.array([0.2, 0.2, 0.8])}]
+lights = [
+    {'position': np.array([5., 5., -10.]), 'color': np.ones(3)},
+    {'position': np.array([-3., 5., -15.]), 'color': np.array([0.5, 0.5, 0.5])},
+    {'position': np.array([0., 10., -5.]), 'color': np.array([0.2, 0.2, 0.8])},
+    {'position': np.array([2.5, 4., -9.]), 'color': np.array([1.0, 1.0, 0.0])}
+]
 
 # Default light and material parameters.
 ambient = .05
@@ -161,4 +164,4 @@ for i, x in enumerate(np.linspace(S[0], S[2], w)):
             reflection *= obj.get('reflection', 1.)
         img[h - j - 1, i, :] = np.clip(col, 0, 1)
 
-plt.imsave('P1.png', img)
+plt.imsave('P1-2.png', img)
